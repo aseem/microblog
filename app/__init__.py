@@ -12,4 +12,4 @@ login = LoginManager(app)
 login.login_view = 'login'
 
 # This import must come after app is created
-from app import routes, models
+from app import routes, models, errors
