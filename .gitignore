@@ -19,6 +19,8 @@ docs/_build/
 .vscode
 *.db
 logs/
+sendgrid.env
+*.pot
 
 # Coverage reports
 htmlcov/
@@ -26,4 +28,4 @@ htmlcov/
 .coverage.*
 *,cover
 Footer
-sendgrid.env
+
