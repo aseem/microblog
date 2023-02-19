@@ -21,10 +21,7 @@ login.login_view = 'login'
 mail = Mail(app)
 bootstrap = Bootstrap(app)
 moment = Moment(app)
-babel = Babel(app))
-
-# This import must come after app is created
-from app import routes, models, errors
+babel = Babel(app)
 
 if not app.debug:
     # Email Setup
@@ -55,6 +52,9 @@ if not app.debug:
         app.logger.setLevel(logging.INFO)
         app.logger.info('Microblog startup')
 
-@babel.localeselector
-def get_locale():
-    return request.accept_languages.best_match(app.config['LANGUAGES'])
+# @babel.localeselector
+# def get_locale():
+#     return request.accept_languages.best_match(app.config['LANGUAGES'])
+
+# This import must come after app is created
+from app import routes, models, errors
